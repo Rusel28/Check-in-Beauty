@@ -1,0 +1,24 @@
+.display__incomes{
+  color: #680093;
+}
+.display__incomes__table{
+width: 90%;
+}
+.wrap_table{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+}
+.data_table{
+width: 100%;
+color: #680093;
+}
+.total{
+  width: 140px;
+}
+
+.windows__paid-wrap-red{
+  background: rgb(237 222 222);
+  border: 1px solid rgb(187 56 56);
+}

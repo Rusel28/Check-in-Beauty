@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0,
+      maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+ 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@300&family=Rubik&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="clients.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="incomes.css">
+    <link rel="stylesheet" href="adaptive.css">
+    <title>Check in BEAUTY</title>
+  </head>
+  <body>
+
+    <section id="customerRecord" class="display">
+      <header class="header">
+        <nav id="headerNav">
+          <img class="img-nav" src="./img/icons1.png" onclick= navLeft()>
+          <span class="today-nav" id="day"></span>
+          <img class="img-nav" src="./img/icons2.png"  onclick= navRight()>
+          </nav>
+        </header>
+
+        <table id="table" class="table">
+          <thead id="theader" class="theader"></thead>
+          <tbody id="tbody" class="tbody"></tbody>
+        </table>
+      </section>
+
+      <div id="windowForRecording" class="windows_none">
+
+        <div class="container">
+          <div class="windows__inner">
+            <div class="windows_data">
+              <span id="windowsData"></span>
+              <span id="currentTime" class="current-time"></span>
+              <input type="time" class="time none" id="windowsTime"></input>
+          </div>
+          <img src="./img/icons3.png" class="btn-delete" id="deleteEntry"></img>
+
+          <input type="text" id="nameEntry" class="input"
+            placeholder="ИМЯ КЛИЕНТА">
+          <input type="number" class="input" id="phoneNumberEntry"
+            placeholder="НОМЕР ТЕЛЕФОНА">
+          <input type="text" id="serviceType" class="input"
+            placeholder="ТИП УСЛУГИ">
+
+          <div class="windows__maney">
+            <div class="input-maney-wrap">
+              <span class="currencyIcon-income">money</span>
+              <input type="number" id="income" class="input-maney-green"
+                placeholder="доход">
+            </div>
+
+            <div class="input-maney-wrap">
+              <span class="currencyIcon-income">money</span>
+              <input type="number" id="tips" class="input-maney-green"
+                placeholder="чаевые">
+            </div>
+
+            <div class="input-maney-wrap input-maney-expenses">
+              <span class="currencyIcon-expenses">money</span>
+              <input type="number" id="expenses" class="input-maney-red"
+                placeholder="расход">
+            </div>
+          </div>
+
+          <btn class="okey" onclick = writeData()>OK</btn>
+          
+        </div>
+      </div>
+    </div>
+
+      <section id="clients" class="display">
+        <ul class="clients__wrapper" id="clientsWrapper">
+        </ul>
+      </section>
+
+      <div id="windowClients" class="windows_clients_none">
+        <div class="container">
+          <div class="windows__inner">
+            <input id="nameWindowClient" class="input">
+            <input id="numberWindowClient" class="input">
+             <img src="./img/icons3.png" class="btn-delete-client" id="deleteClient"></img>
+            <div class="windows__inner-wrap">
+              <div class="windows__inner__record">
+                <span class="last_record_text">последняя запись</span>
+                <span id="lastRecord" class="last_record"></span>
+              </div>
+
+              <div class="windows__inner__record">
+                <span class="last_record_text">всего записей</span>
+                <span id="recordСount" class="last_record"></span>
+              </div>
+
+              <div class="windows__inner__record windows__inner__paid">
+
+                <span class="last_record_text last_record_paid">Оплачено за
+                  услугу</span>
+
+                <div class="windows__paid-wrap">
+                  <span id="sumIncome" class="last_record paid-services">
+                  </span>
+                  <span class="currencyIcon-income">money</span>
+                </div>
+
+              </div>
+              <div class="windows__inner__record windows__inner__paid">
+                <span class="last_record_text last_record_paid">Чаевые</span>
+                <div class="windows__paid-wrap">
+                  <span id="sumTips" class="last_record paid-services"></span>
+                  <span class="currencyIcon-income">money</span>
+                </div>
+              </div>
+            </div>
+            <btn class="okey" onclick= closeWindow()>
+              OK
+            </btn>
+            <a class="user__tell" id ="numberTell" >
+              <div class="outlined">
+              <span class="material-symbols-outlined">android_dialer</span>
+              </div>
+              </a>
+          </div>
+        
+
+        </div>
+      </div>
+
+      <section id="incomes" class="display">
+        <h2 class="display__incomes">ДОХОДЫ</h2>
+        <table>
+          <tbody class="display__incomes__table">
+            <tr class="wrap_table">
+              <td class="data_table">ДОХОД ОТ УСЛУГ</td>
+              <td class="total" >
+                  <div class="windows__paid-wrap">
+                  <span id="totalIncome" class="last_record paid-services">
+                  </span>
+                  <span class="currencyIcon-income">money</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="wrap_table">
+              <td class="data_table">ЧАЕВЫЕ</td>
+              <td class="total" >
+                  <div class="windows__paid-wrap">
+                  <span id="totaltips" class="last_record paid-services">
+                  </span>
+                  <span class="currencyIcon-income">money</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="wrap_table">
+              <td class="data_table">РАСХОДЫ НА УСЛУГИ</td>
+              <td class="total" >
+                  <div class="windows__paid-wrap windows__paid-wrap-red">
+                  <span id="totalExpenses" class="last_record  paid-services">
+                  </span>
+                  <span class="currencyIcon-expenses">money</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="wrap_table">
+              <td class="data_table">С УЧЕТОМ ВСЕГО</td>
+              <td class="total" >
+                  <div class="windows__paid-wrap">
+                  <span id="totalTable" class="last_record paid-services ">
+                  </span>
+                  <span class="currencyIcon-income">money</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+      </section>
+
+      <footer class="footer">
+        <div class="footer__nav">
+
+          <div class="footer__btn" data-tab="#customerRecord" id="btnRecords">
+
+            <span class="material-icons">
+              wysiwyg
+            </span>
+            <span class="name-icon">Записи</span>
+          </div>
+
+          <div class="footer__btn" data-tab="#clients" id="btnAccount">
+            <span class="material-icons">
+              supervisor_account
+            </span>
+            <span class="name-icon">Клиенты</span>
+          </div>
+
+          <div class="footer__btn" data-tab="#incomes" id="btnIncome">
+            <span class="material-icons">
+              attach_money
+            </span>
+            <span class="name-icon">Доход</span>
+          </div>
+        </div>
+      </footer>
+
+    <script src="beauty.js"></script>
+
+  </body>
+</html>

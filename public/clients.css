@@ -1,0 +1,130 @@
+.clients__wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+}
+
+.client {
+  list-style-type: none;
+  margin-top: 5px;
+  padding: 3px 0;
+  border: 1px solid #8503bb;
+  border-radius: 15px;
+  text-align: center;
+  color: #680093;
+  min-height: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.windows_clients_none {
+  display: none;
+}
+
+.windows_clients {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+  z-index: 9;
+}
+
+
+.windows__inner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+  width: 100%;
+}
+
+.windows__inner__record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.last_record_text {
+  text-transform: uppercase;
+  color: #6c6c6c;
+  padding-bottom: 5px;
+}
+
+.last_record {
+  color: #680093;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.last_record_paid {
+  padding: 0;
+  width: 70px;
+  font-size: 12px;
+  color: #0e5200;
+  text-transform: lowercase;
+}
+
+.windows__inner__paid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+
+}
+
+.windows__paid-wrap {
+  border: 1px solid rgb(29 153 6);
+  background: rgb(222 241 223);
+  border-radius: 15px;
+  width: 95px;
+  min-height: 19px;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.paid-services {
+  color: rgb(14, 82, 0);
+  padding-right: 5px;
+}
+.outlined{
+  width: 40px;
+  border: 1px solid #8503bb;
+  border-radius: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.btn-delete-client {
+  position: relative;
+  left: 121px;
+  top: 50px;
+  width: 34px;
+}
+

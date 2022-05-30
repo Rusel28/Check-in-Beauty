@@ -1,0 +1,362 @@
+body {
+  font-family: 'Rubik';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+a { 
+  text-decoration: none;
+ } 
+
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  margin: 10px 0;
+}
+
+#day {
+  font-weight: bold;
+}
+
+#headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+.today-nav{
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.img-nav{
+  width: 45px;
+}
+#vacancies {
+  text-align: center;
+  border: 1px solid blue;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/*-----------calendar-------*/
+.table {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.dayHeader {
+  border-radius: 50%;
+  width: 43px;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 0px 0px 6px 0px rgb(133 3 187);
+  border: 1px solid rgb(133 3 187);
+}
+
+.calendar__tr{
+  gap: 3px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar__td{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 43px;
+  height: 41px;
+  border:  1px solid rgb(227 160 255);
+  font-size: 15px;
+  border-radius: 100%;
+  box-shadow: 2px 5px 5px 0px rgb(193 165 205);
+  font-weight: 600;
+}
+
+#customerRecord {
+  padding-bottom: 90px;
+}
+
+/*----------footer---------------*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: black;
+  padding: 5px 0;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.footer__btn:hover{
+  color: rgb(227 160 255);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+
+
+.name-icon {
+  font-size: 16px;
+}
+
+.plus {
+  font-size: 33px;
+}
+
+/*-----------windows 1-------------------*/
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.none{
+  display: none;
+}
+
+.current-time{
+margin: 13px 0;
+}
+.windows__inner {
+  flex-direction: column;
+  align-items: center;
+  min-height: 339px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(247, 245, 245);
+  border: 1px solid rgb(83, 3, 187);
+  border-radius: 25px;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.windows_none {
+  display: none;
+}
+
+.windows {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+}
+
+.windows_data {
+  margin-top: 6px;
+  text-align: center;
+  color: #545454;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.windows__maney {
+  margin-top: 10px;
+  position: relative;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-maney-wrap, .input-maney-expenses{
+  background: rgb(225 239 222);
+  border: 1px solid rgb(29 153 6);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.input-maney-expenses{
+  background: rgb(237 222 222);
+  border: 1px solid rgb(187 56 56);
+}
+
+.input-maney-green,
+.input-maney-red {
+  width: 65px;
+  text-align: right;
+  color: rgb(14, 82, 0);
+  font-family: 'Rubik';
+  font-size: 16px;
+  outline:none;
+  background: transparent;
+  border: none;
+}
+
+.input-maney-red::placeholder {
+  outline:none;
+  color: rgb(85, 10, 10);
+}
+
+.currencyIcon-income,
+.currencyIcon-expenses {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  color: rgb(42, 173, 49); 
+}
+.currencyIcon-expenses {
+  color: rgb(255, 89, 89);
+}
+
+.input{
+  margin-bottom: 4px;
+  border: 1px solid rgb(188, 136, 247);
+  background:rgb(237 221 255) ;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(104 0 147);
+  outline:none;
+}
+
+.okey {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #8503bb;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 25px;
+  color: #FFF;
+  box-shadow: inset 0 0 0 2px #fff;
+  border: 1px solid #8503bb;
+}
+
+.user__tell{
+  position: absolute;
+  bottom: 26px;
+  left: 22px;
+}
+
+.display{
+  display: none;
+}
+
+.display.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*--------------меняем цвет в ячейке------------------*/
+
+.written-down{
+  box-shadow: 0px 0px 5px 0px green;
+  border: 1px solid green !important;
+}
+
+
+#windowsTime {
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 160px;
+}
+.windowsTime_none{
+  display: none;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+#windowsTime::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+#windowsTime::-webkit-datetime-edit-text {
+  padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+#windowsTime::-webkit-datetime-edit-hour-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* Minute */
+#windowsTime::-webkit-datetime-edit-minute-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+#windowsTime::-webkit-datetime-edit-ampm-field {
+  background-color: #7155d3;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+/* 'X' button for resetting/clearing time */
+#windowsTime::-webkit-clear-button {
+  display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+#windowsTime::-webkit-inner-spin-button {
+  display: none;
+}
+
+.week_red{
+  border-radius: 50%;
+  width: 43px;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 0px 0px 18px 0px red  ;
+  
+}
+.btn-delete{
+  position: relative;
+  left: 119px;
+  top: -84px;
+  width: 34px;;
+}
+
